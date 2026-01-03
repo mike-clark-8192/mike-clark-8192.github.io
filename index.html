@@ -36,6 +36,34 @@
       opacity: 0.15;
     }
 
+    .beads {
+      position: fixed;
+      right: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      opacity: 0.08;
+    }
+
+    .beads::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background: var(--brown);
+    }
+
+    .bead {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 1px solid var(--brown);
+      background: var(--cream);
+    }
+
     main {
       text-align: center;
       z-index: 1;
@@ -73,6 +101,11 @@
 </head>
 <body>
   <div class="wave"></div>
+  <div class="beads">
+    <div class="bead"></div>
+    <div class="bead"></div>
+    <div class="bead"></div>
+  </div>
   <main>
     <h1>mike-clark-8192</h1>
     <nav>
